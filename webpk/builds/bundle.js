@@ -56,7 +56,6 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	(0, _jquery2.default)('body').html('Hello');
 	var button = new _Button2.default('google.com');button.render('a');
 
 /***/ },
