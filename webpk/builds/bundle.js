@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "builds/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -56,7 +56,15 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var button = new _Button2.default('google.com');button.render('a');
+	// Code Splitting
+	if (document.querySelectorAll('a').length) {
+	    !/* require.ensure */(function () {
+	        var Button = __webpack_require__(2).default;
+	        var button = new Button('google.com');
+
+	        button.render('a');
+	    }(__webpack_require__));
+	}
 
 /***/ },
 /* 1 */
